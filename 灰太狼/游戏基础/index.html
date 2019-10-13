@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>锅打灰太狼</title>
+    <script src="./gametime.js"></script>
+    <script src="./onclik.js"></script>
+    <script src="./wolf.js"></script>
+    <script src="./gameMap.js"></script>
+    <script src="./gameview.js"></script>
+    <script src="./game.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        
+       
+     
+         
+         let game = new Game(320, 480);
+        game.start();
+    
+        document.onclick = function (ev) {
+               var oEvent = ev || event;
+               var x = oEvent.clientX;
+               var y = oEvent.clientY;
+            
+               game.onclick(x,y);
+          }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+=
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01 游戏基础</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="700" style="border: 1px solid #6c6c92;">
+
+    </canvas>
+</body>
+
+<script>
+    //获得画布
+    let canvas = document.getElementById('canvas');
+    //获得画笔
+    let paint = canvas.getContext('2d');
+    //创建一个图片
+    let background = new Image();
+    //设置图片资源
+    background.src = "../img/bg__01.png";
+
+    setInterval('run()', 300);
+
+    function run() {
+        //绘制图片
+        paint.drawImage(background, 0, 0, 480, 100);
+    }
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>06添加飞机 </title>
+    <script src="./Bomb.js"></script>
+    <script src="./EnemyBullet.js"></script>
+    <script src="./Enemy.js"></script>
+    <script src="./Bullet.js"></script>
+    <script src="./Npc.js"></script>
+    <script src="./Map.js"></script>
+    <script src="./GameView.js"></script>
+    <script src="./Game.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+</body>
+
+<script>
+    let game = new Game(480, 500);
+    game.start();
+
+    document.onkeypress = function (event) {
+        let keyCode = event.keyCode;
+        game.onkeypress(keyCode);
+    }
+</script>
+
+</html>
